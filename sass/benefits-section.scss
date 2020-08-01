@@ -1,0 +1,11 @@
+.benefits-section {
+  position: relative;
+  background: url("../image/узор_лист.png") left top 57% no-repeat;
+
+  &::before {
+    content: url("../image/малина.png");
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+  }
+}

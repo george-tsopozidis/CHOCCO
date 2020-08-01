@@ -1,0 +1,19 @@
+.order-section {
+  background: url("../image/паттерн.png") center center no-repeat;
+  background-size: 100%;
+  position: relative;
+
+  &::before {
+    content: url("../image/ягодаblue.png");
+    position: absolute;
+    left: 20px;
+    bottom: 100px;
+  }
+
+  &::after {
+    content: url("../image/листgreen.png");
+    position: absolute;
+    right: 0;
+    bottom: 94px;
+  }
+}
