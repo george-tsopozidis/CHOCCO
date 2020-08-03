@@ -556,7 +556,7 @@ img {
   overflow: hidden;
   position: relative;
 }
-.interactive-avatar--active {
+.interactive-avatar--active:hover {
   border-color: #0f5a47;
 }
 
@@ -598,6 +598,9 @@ img {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 18px;
+}
+.form__row:last-child {
+  margin-bottom: 0;
 }
 
 .form__block {
@@ -689,7 +692,7 @@ img {
 
 .order-section {
   background: url("../image/паттерн.png") center center no-repeat;
-  background-size: 100%;
+  background-size: cover;
   position: relative;
 }
 .order-section::before {

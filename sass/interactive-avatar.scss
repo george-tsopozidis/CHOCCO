@@ -6,7 +6,7 @@
   overflow: hidden;
   position: relative;
 
-  &--active {
+  &--active:hover {
     border-color: #0f5a47;
   }
 }
