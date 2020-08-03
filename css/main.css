@@ -556,7 +556,10 @@ img {
   overflow: hidden;
   position: relative;
 }
-.interactive-avatar--active:hover {
+.interactive-avatar.interactive-avatar:hover {
+  border-color: #0f5a47;
+}
+.interactive-avatar--active {
   border-color: #0f5a47;
 }
 
