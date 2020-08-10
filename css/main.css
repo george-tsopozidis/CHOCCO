@@ -232,6 +232,7 @@ img {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+    z-index: 2;
   }
   .hero__title-section::before {
     content: "";
