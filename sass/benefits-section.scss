@@ -2,10 +2,23 @@
   position: relative;
   background: url("../image/узор_лист.png") left top 57% no-repeat;
 
+
+  @include tablets {
+    background-position: 0 12%;
+}
+
+@include phones {
+  background: none;
+}
+
   &::before {
     content: url("../image/малина.png");
     position: absolute;
-    bottom: -80px;
+    bottom: rem(-80px);
     left: 0;
+
+    @include phones {
+      display: none;
+    }
   }
 }

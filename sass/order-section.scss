@@ -6,14 +6,20 @@
   &::before {
     content: url("../image/ягодаblue.png");
     position: absolute;
-    left: 20px;
-    bottom: 100px;
+    left: rem(20px);
+    bottom: rem(100px);
   }
 
   &::after {
     content: url("../image/листgreen.png");
     position: absolute;
     right: 0;
-    bottom: 94px;
+    bottom: rem(94px);
+  }
+
+  @include tablets {
+    &::before, &::after {
+      display: none;
+    }
   }
 }
