@@ -8,7 +8,7 @@
 
   @include tablets {
     background-position: right bottom 78%;
-    height: 178vh;
+    height: 100vh;
   }
 
   &::before {
@@ -20,7 +20,7 @@
   &::after {
     @include tablets {
       left: rem(195px);
-      top: 29rem;
+      top: 8rem;
     }
   }
 

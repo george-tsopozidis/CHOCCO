@@ -182,7 +182,7 @@ img {
 @media screen and (max-width: 768px) {
   .hero {
     background-position: right bottom 78%;
-    height: 178vh;
+    height: 100vh;
   }
 }
 @media screen and (max-width: 768px) {
@@ -193,7 +193,7 @@ img {
 @media screen and (max-width: 768px) {
   .hero::after {
     left: 10.8333333333rem;
-    top: 29rem;
+    top: 8rem;
   }
 }
 .hero::before {
@@ -1125,6 +1125,9 @@ img {
 }
 .footer__item:last-child {
   margin-right: 0;
+}
+.footer__item:hover {
+  opacity: 0.3;
 }
 
 .footer__row-socials {
