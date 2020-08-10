@@ -2,12 +2,18 @@
   padding: rem(180px) 0;
   position: relative;
   background: url("../image/Узор25.png") left bottom -13% no-repeat;
-
+  height: 100%;
+  
+  @include tablets {
+    background-position: left -2% bottom -18%;
+  }
+  
   &::before {
     content: url("../image/Ягоды.png");
     position: absolute;
     left: rem(10px);
-    bottom: 0;
+    bottom: -2rem;
+    z-index: 2;
   }
 
   &::after {
@@ -15,6 +21,10 @@
     position: absolute;
     top: rem(69px);
     right: rem(24px);
+
+    @include tablets {
+      top: rem(0.6px);
+    }
   }
 }
 
@@ -73,6 +83,10 @@
 .reviews__content {
   flex: 1;
   margin-left: rem(20px);
+
+  @include tablets {
+    margin-left: 0;
+  }
 }
 
 .reviews__title {
@@ -95,4 +109,8 @@
 .reviews__switcher {
   display: flex;
   justify-content: center;
+
+  @include tablets {
+    margin-bottom: rem(128px);
+  }
 }

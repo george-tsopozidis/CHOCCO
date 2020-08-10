@@ -5,10 +5,6 @@
   flex-direction: column;
   justify-content: center;
 
-  @include phones {
-    height: 100vh;
-  }
-
   &--font--color--green {
     color: $darkGreen;
 
@@ -29,4 +25,8 @@
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+
+  @include tablets {
+    margin-bottom: 0;
+  }
 }

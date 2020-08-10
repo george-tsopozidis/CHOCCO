@@ -311,6 +311,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: 4%;
 }
 
 @media screen and (max-width: 768px) {
@@ -471,11 +472,6 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media screen and (max-width: 480px) {
-  .section {
-    height: 100vh;
-  }
-}
 .section--font--color--green {
   color: #0b4d3c;
 }
@@ -495,6 +491,11 @@ img {
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+}
+@media screen and (max-width: 768px) {
+  .section__title {
+    margin-bottom: 0;
+  }
 }
 
 .benefits-section {
@@ -586,6 +587,9 @@ img {
     margin-bottom: 1.9444444444rem;
     margin-left: 0;
   }
+  .benefits__item:last-child {
+    margin-bottom: 0;
+  }
 }
 .benefits__item:first-child {
   margin-left: 0;
@@ -666,18 +670,30 @@ img {
   padding: 10rem 0;
   position: relative;
   background: url("../image/Узор25.png") left bottom -13% no-repeat;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .reviews__section {
+    background-position: left -2% bottom -18%;
+  }
 }
 .reviews__section::before {
   content: url("../image/Ягоды.png");
   position: absolute;
   left: 0.5555555556rem;
-  bottom: 0;
+  bottom: -2rem;
+  z-index: 2;
 }
 .reviews__section::after {
   content: url("../image/Ягода.png");
   position: absolute;
   top: 3.8333333333rem;
   right: 1.3333333333rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__section::after {
+    top: 0.0333333333rem;
+  }
 }
 
 .reviews {
@@ -747,6 +763,11 @@ img {
           flex: 1;
   margin-left: 1.1111111111rem;
 }
+@media screen and (max-width: 768px) {
+  .reviews__content {
+    margin-left: 0;
+  }
+}
 
 .reviews__title {
   font-size: 1.6666666667rem;
@@ -772,6 +793,11 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .reviews__switcher {
+    margin-bottom: 7.1111111111rem;
+  }
 }
 
 .interactive-avatar {
@@ -1027,7 +1053,9 @@ img {
 .hamburger {
   width: 24px;
   height: 20px;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1038,9 +1066,9 @@ img {
 }
 @media screen and (max-width: 768px) {
   .hamburger {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    position: fixed;
+    top: 4%;
+    right: 3%;
   }
 }
 
