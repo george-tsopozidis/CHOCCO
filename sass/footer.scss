@@ -48,13 +48,15 @@
 
 .footer__item {
   margin-right: rem(16px);
+  opacity: 0.3;
 
   &:last-child {
     margin-right: 0;
   }
 
   &:hover {
-    opacity: 0.3;
+    opacity: 1;
+    transition: .2s linear;
   }
 }
 

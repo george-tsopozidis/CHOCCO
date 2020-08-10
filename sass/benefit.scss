@@ -47,7 +47,11 @@
 .benefit__desc {
   width: 110%;
 
+  @include tablets {
+    width: 111%;
+  }
+
   @include phones {
-    width: 100%;
+    width: 110%;
   }
 }

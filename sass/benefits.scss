@@ -18,6 +18,10 @@
     right: 0;
     transform: translateX(50%);
 
+    @include tablets {
+      display: none;
+    }
+
     @include phones {
       display: none;
     }

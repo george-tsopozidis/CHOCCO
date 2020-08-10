@@ -14,7 +14,7 @@
   &::before {
     content: url("../image/малина.png");
     position: absolute;
-    bottom: rem(-80px);
+    bottom: rem(-145px);
     left: 0;
 
     @include phones {

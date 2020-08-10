@@ -464,7 +464,7 @@ img {
 }
 
 .section {
-  height: 140vh;
+  height: 100vh;
   min-height: 36.1111111111rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -520,7 +520,7 @@ img {
 .benefits-section::before {
   content: url("../image/малина.png");
   position: absolute;
-  bottom: -4.4444444444rem;
+  bottom: -8.0555555556rem;
   left: 0;
 }
 @media screen and (max-width: 480px) {
@@ -575,6 +575,11 @@ img {
   right: 0;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
+}
+@media screen and (max-width: 768px) {
+  .benefits__item::before {
+    display: none;
+  }
 }
 @media screen and (max-width: 480px) {
   .benefits__item::before {
@@ -652,9 +657,14 @@ img {
 .benefit__desc {
   width: 110%;
 }
+@media screen and (max-width: 768px) {
+  .benefit__desc {
+    width: 111%;
+  }
+}
 @media screen and (max-width: 480px) {
   .benefit__desc {
-    width: 100%;
+    width: 110%;
   }
 }
 
@@ -1122,12 +1132,15 @@ img {
 
 .footer__item {
   margin-right: 0.8888888889rem;
+  opacity: 0.3;
 }
 .footer__item:last-child {
   margin-right: 0;
 }
 .footer__item:hover {
-  opacity: 0.3;
+  opacity: 1;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
 }
 
 .footer__row-socials {
