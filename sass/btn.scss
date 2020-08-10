@@ -12,6 +12,11 @@
   text-decoration: none;
   display: inline-block;
   border: none;
+  position: relative;
+
+  @include tablets {
+    top: 10%;
+  }
 
   &--theme--white {
     background: #ffffff;

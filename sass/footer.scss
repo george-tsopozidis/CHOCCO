@@ -42,15 +42,20 @@
   color: $darkGreen;
 }
 
-.footer__row-socials {
-  max-width: 5%;
+.footer__list {
+  display: flex;
+}
+
+.footer__item {
   margin-right: rem(16px);
-  
+
   &:last-child {
     margin-right: 0;
   }
 }
 
-.footer__list {
-  display: flex;
+.footer__row-socials {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
 }
