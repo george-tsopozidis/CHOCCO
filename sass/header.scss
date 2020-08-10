@@ -14,8 +14,7 @@
   margin: 0 30px;
   padding-top: 5px;
 
-
-  @include tablets {
+   @include tablets {
     display: none;
   }
 }

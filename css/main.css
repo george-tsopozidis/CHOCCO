@@ -181,19 +181,13 @@ img {
 }
 @media screen and (max-width: 768px) {
   .hero {
-    background-position: right bottom 78%;
-    height: 100vh;
+    background-position: 109% 33%;
+    background-size: 66%;
   }
 }
 @media screen and (max-width: 768px) {
-  .hero::before {
+  .hero::before, .hero::after {
     display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  .hero::after {
-    left: 10.8333333333rem;
-    top: 8rem;
   }
 }
 .hero::before {
@@ -207,6 +201,28 @@ img {
   position: absolute;
   bottom: -2.2222222222rem;
   right: 0;
+}
+
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  padding: 1.3333333333rem 0 2.5rem 0;
+  background: url("../image/Батончики.png") right center/50% auto no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .hero__container {
+    background: none;
+    padding: 0;
+  }
 }
 
 .hero__title-section {
@@ -235,10 +251,9 @@ img {
     z-index: 2;
   }
   .hero__title-section::before {
-    content: "";
+    content: url("../image/all.png");
     width: 17.5555555556rem;
     height: 18.3333333333rem;
-    background: url("../image/Батончики.png") center center/contain no-repeat;
     margin-bottom: 0.8888888889rem;
   }
 }
@@ -246,27 +261,6 @@ img {
 @media screen and (max-width: 768px) {
   .hero__icons-section {
     display: none;
-  }
-}
-
-.hero__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 100%;
-  padding: 1.3333333333rem 0 2.5rem 0;
-  background: url("../image/Батончики.png") right center/50% auto no-repeat;
-}
-@media screen and (max-width: 768px) {
-  .hero__container {
-    background: none;
   }
 }
 

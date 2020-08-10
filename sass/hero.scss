@@ -1,26 +1,20 @@
 .hero {
-  background: url("../image/узор\ 1.png") right bottom no-repeat;
+  background: 
+  url("../image/узор\ 1.png") right bottom no-repeat;
   background-color: $blue;
   height: 100vh;
   min-height: rem(650px);
   color: #ffffff;
   position: relative;
 
-  @include tablets {
-    background-position: right bottom 78%;
-    height: 100vh;
+  @include  tablets {
+    background-position: 109% 33%;
+    background-size: 66%;
   }
 
-  &::before {
+  &::before, &::after {
     @include tablets {
       display: none;
-   }
-  }
-
-  &::after {
-    @include tablets {
-      left: rem(195px);
-      top: 8rem;
     }
   }
 
@@ -39,6 +33,19 @@
   }
 }
 
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: rem(24px) 0 rem(45px) 0;
+  background: url("../image/Батончики.png") right center / 50% auto no-repeat;
+  @include tablets {
+    background: none;
+    padding: 0;
+  }
+}
+
 .hero__title-section {
   width: 46%;
 
@@ -53,10 +60,9 @@
     z-index: 2;
 
     &::before {
-      content: "";
+      content: url("../image/all.png");
       width: rem(316px);
-      height: rem(330px);
-      background: url("../image/Батончики.png") center center / contain no-repeat;
+      height: rem(330px); 
       margin-bottom: rem(16px);
     }
   }
@@ -66,20 +72,6 @@
   @include tablets {
     display: none;
   }
-}
-
-.hero__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: rem(24px) 0 rem(45px) 0;
-  background: url("../image/Батончики.png") right center / 50% auto no-repeat;
-
-  @include tablets {
-    background: none;
-  }
-
 }
 
 .hero__main-title {
