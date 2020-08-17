@@ -1265,21 +1265,7 @@ img {
   }
 }
 
-.slider__hover {
-  position: relative;
-  padding: 0.6666666667rem 1.1111111111rem;
-  border: 1px solid #f8faf9;
-  border-radius: 0.3333333333rem;
-  background: #61c4d9;
-  margin-bottom: 1.3333333333rem;
-}
-.slider__hover ul {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  background: white;
-  width: 15rem;
-  height: 18.2777777778rem;
+.slider__hover-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1287,17 +1273,64 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: white;
+  width: 15rem;
+  height: 18.2777777778rem;
   opacity: 0;
   pointer-events: none;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
+}
+
+.slider__hover-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.4444444444rem;
+}
+.slider__hover-item:last-child {
+  margin-bottom: 0;
+}
+
+.slider__hover-svg {
+  width: 25px;
+  height: 25px;
+}
+
+.slider__link {
+  color: #363636;
+  font-size: 0.8888888889rem;
+  font-weight: 500;
+  line-height: 1.3333333333rem;
+}
+
+.slider__gramms-link {
+  color: #373636;
+  font-size: 0.8888888889rem;
+  font-weight: normal;
+  line-height: 1.3333333333rem;
+}
+
+.slider__hover {
+  position: relative;
+  padding: 0.6666666667rem 1.1111111111rem;
+  border: 1px solid #f8faf9;
+  border-radius: 0.3333333333rem;
+  background: #61c4d9;
+  margin-bottom: 1.3333333333rem;
 }
 .slider__hover a {
   color: #000000;
