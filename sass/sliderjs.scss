@@ -1,0 +1,33 @@
+.slider__left-link {
+  position: absolute;
+  left: -2%;
+  top: 44%;
+}
+
+.slider__right-link {
+  position: absolute;
+  right: -2%;
+  bottom: 50%;
+}
+
+.sliders {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.items {
+  display: -webkit-box;
+  position: relative;
+  right: 0;
+  transition: right .6s;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}

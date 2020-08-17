@@ -1,0 +1,180 @@
+.slider-section {
+  background: #f8faf9;
+
+  @include tablets {
+    padding: rem(86px) 0 rem(104px) 0;
+  }
+}
+
+.slider__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 14%;
+  right: 0;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.slider__image  {
+  margin-right: rem(21px);
+
+  @include tablets {
+    margin-bottom: rem(24px);
+  }
+}
+
+.slider__image-icon {
+  width: rem(424px);
+  height: rem(370px);
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 44%;
+  position: relative;
+  bottom: 0%;
+
+  @include tablets {
+    max-width: 80%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.slider__hover {
+  position: relative;
+  padding: rem(12px) rem(20px);
+  border: 1px solid #f8faf9;
+  border-radius: rem(6px);
+  background: $blue;
+  margin-bottom: rem(24px);
+
+  & ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: white;
+    width: rem(270px);
+    height: rem(329px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all .4s ease;
+  }
+
+  & a {
+    color: #000000;
+  text-decoration: none;
+  }
+
+  & li:hover {
+    background-color: darkgray;
+  }
+
+ &:hover {
+   background-color: #60aacc;
+ }
+
+ & .slider__hover-link:hover + ul {
+   opacity: 1;
+   pointer-events: all;
+   transform: translateY(0);
+ }
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.slider__hover-desc {
+  color: #ffffff;
+  font-size: rem(14px);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.slider__title {
+  color: #000000;
+  font-size: rem(36px);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: rem(24px);
+
+  @include tablets {
+    font-size: rem(30px);
+    line-height: rem(36px);
+  }
+}
+
+.slider__info-desc  {
+  color: #666666;
+  font-size: rem(18px);
+  font-weight: 400;
+  margin-bottom: rem(24px);
+}
+
+.slider__info-dose  {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: rem(24px);
+
+  @include tablets {
+    justify-content: center;
+  }
+  
+}
+
+.slider__info-calories  {
+  display: flex;
+  flex-direction: column;
+  margin-right: rem(44px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    align-items: flex-start;
+  }
+}
+
+.slider__info-text  {
+  color: #666666;
+  font-size: rem(18px);
+  font-weight: 400;
+}
+
+.slider__info-bold {
+  color: #000000;
+  font-size: rem(18px);
+  font-weight: 700;
+}
+
+.slider__info-order {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.slider__info-price {
+  color: #151515;
+  font-size: rem(60px);
+  font-weight: 300;
+  line-height: rem(60px);
+  text-transform: uppercase;
+  margin-right: rem(42px);
+}
+
