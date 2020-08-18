@@ -1050,16 +1050,21 @@ img {
           transform: translate(-50%, -50%);
 }
 
+.fullscreen {
+  display: none;
+}
 @media screen and (max-width: 768px) {
-  .hamburger {
+  .fullscreen {
+    display: block;
+  }
+  .fullscreen .hamburger {
     position: fixed;
     top: 4%;
     right: 3%;
     font-size: 1.6666666667rem;
     color: #ffffff;
   }
-
-  .overlay {
+  .fullscreen .overlay {
     height: 0%;
     width: 100%;
     position: fixed;
@@ -1072,16 +1077,14 @@ img {
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-
-  .overlay-content {
+  .fullscreen .overlay-content {
     position: relative;
     top: 25%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
   }
-
-  .overlay a {
+  .fullscreen .overlay a {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
@@ -1090,18 +1093,17 @@ img {
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-
-  .overlay a:hover, .overlay a:focus {
+  .fullscreen .overlay a:hover, .fullscreen .overlay a:focus {
     color: #f1f1f1;
   }
-
-  .overlay .closebtn {
+  .fullscreen .overlay .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
   }
 }
+
 .map-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1313,14 +1315,14 @@ img {
 .slider__link {
   color: #363636;
   font-size: 0.8888888889rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.3333333333rem;
 }
 
 .slider__gramms-link {
   color: #373636;
   font-size: 0.8888888889rem;
-  font-weight: normal;
+  font-weight: 700;
   line-height: 1.3333333333rem;
 }
 
@@ -1332,21 +1334,22 @@ img {
   background: #61c4d9;
   margin-bottom: 1.3333333333rem;
 }
+.slider__hover:hover {
+  background-color: #60aacc;
+}
 .slider__hover a {
   color: #000000;
   text-decoration: none;
 }
-.slider__hover li:hover {
-  background-color: darkgray;
-}
-.slider__hover:hover {
-  background-color: #60aacc;
-}
-.slider__hover .slider__hover-link:hover + ul {
-  opacity: 1;
+.slider__hover:hover .slider__hover-list {
+  background-color: #ffffff;
+  opacity: 0.9;
   pointer-events: all;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+.slider__hover li:hover {
+  background-color: darkgray;
 }
 @media screen and (max-width: 768px) {
   .slider__hover {

@@ -82,14 +82,14 @@
 .slider__link {
   color: #363636;
   font-size: rem(16px);
-  font-weight: 500;
+  font-weight: 700;
   line-height: rem(24px);
 }
 
 .slider__gramms-link {
   color: #373636;
   font-size: rem(16px);
-  font-weight: normal;
+  font-weight: 700;
   line-height: rem(24px);
 }
 
@@ -101,26 +101,27 @@
   background: $blue;
   margin-bottom: rem(24px);
 
+  &:hover {
+    background-color: #60aacc;
+  }
+
   & a {
     color: #000000;
     text-decoration: none;
   }
 
-  & li:hover {
-    background-color: darkgray;
-  }
-
- &:hover {
-   background-color: #60aacc;
- }
-
- & .slider__hover-link:hover + ul {
-   opacity: 1;
+ &:hover .slider__hover-list {
+   background-color: #ffffff;
+   opacity: 0.9;
    pointer-events: all;
    transform: translateY(0);
  }
 
-  @include tablets {
+ & li:hover {
+  background-color: darkgray;
+}
+
+  @include  tablets {
     display: none;
   }
 }
