@@ -3,7 +3,7 @@ let burger  = document.querySelector('.burger');
 let overlay = document.querySelector('.overlay');
 let body = document.querySelector('body');
 
-let links = document.querySelectorAll('.menu__link');
+let links = document.querySelectorAll('.menu__burger-link');
 
 links.forEach(function(element){
   element.addEventListener('click' , toggleMenu);
