@@ -1,61 +1,107 @@
-.fullscreen {
-  display: none;
+.burger{
+  position: fixed;
+  top:20px;
+  right: 10%;
+  height: 25px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 15;
+  transition:all .4s;
 
-  @include tablets {
+  &__line{
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: #fff;
+    top:0;
+    left: 0;
+    transition:all .4s;
 
-    & {
-      display: block;
+
+    &:nth-child(2){
+      top:50%;
+      transform:translateY(-50%);
     }
 
-    .hamburger {
-      position: fixed;
-      top: 4%;
-      right: 3%;
-      font-size:rem(30px);
-      color: #ffffff;
+    &:nth-child(3){
+      bottom:0;
+      top:initial;
     }
-    
-    .overlay {
-      height: 0%;
-      width: 100%;
-      position: fixed;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      background-color: rgb(0,0,0);
-      background-color: rgba(0,0,0, 0.9);
-      overflow-y: hidden;
-      transition: 0.5s;
-    }
-    
-    .overlay-content {
-      position: relative;
-      top: 25%;
-      width: 100%;
-      text-align: center;
-      margin-top: 30px;
-    }
-    
-    .overlay a {
-      padding: 8px;
-      text-decoration: none;
-      font-size: 36px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-    }
-    
-    .overlay a:hover, .overlay a:focus {
-      color: #f1f1f1;
-    }
-    
-    .overlay .closebtn {
-      position: absolute;
-      top: 20px;
-      right: 45px;
-      font-size: 60px;
-     }
-    }
+  }
 }
 
+.fullscreen{
+  background-color: black;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
 
+  &::after {
+    display: none;
+  }
+}
+
+.overlay{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  transition:all .4s;
+
+  position:fixed;
+  top:0;
+  left:100%;
+  opacity:1;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.menu__burger {
+
+  &__burger-item{
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-transform: uppercase;
+
+  &:last-child{
+    margin-bottom:0;
+  }
+}
+
+  &__burger-link{
+    &:hover{
+      opacity:.7;
+    }
+  }
+}
+
+.burger--active {
+  
+  .burger__line {
+    
+    &:nth-child(1) {
+      opacity:0;
+    }
+
+    &:nth-child(2){
+      transform:rotate(45deg);
+    }
+
+    &:nth-child(3){
+      transform:rotate(-45deg) translateY(-8px) translateX(5px);
+    }
+  }
+}
+
+.overlay--active{
+  left: 0;
+  opacity:1;
+}

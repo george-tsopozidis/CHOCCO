@@ -1,7 +1,17 @@
-function openNav() {
-  document.getElementById("myNav").style.height = "100%";
+// простой способ
+let burger  = document.querySelector('.burger');
+let overlay = document.querySelector('.overlay');
+let body = document.querySelector('body');
+
+let links = document.querySelectorAll('.menu__link');
+
+links.forEach(function(element){
+  element.addEventListener('click' , toggleMenu);
+})
+
+function toggleMenu(){
+  burger.classList.toggle('burger--active');
+  overlay.classList.toggle('overlay--active');
 }
 
-function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
-}
+burger.addEventListener('click' , toggleMenu);
