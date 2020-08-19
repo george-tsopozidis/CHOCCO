@@ -1,3 +1,23 @@
+.fullscreen{
+  background-color: black;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  display: none;
+
+  @include tablets {
+    display: block;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+
 .burger{
   position: fixed;
   top:20px;
@@ -27,20 +47,6 @@
       bottom:0;
       top:initial;
     }
-  }
-}
-
-.fullscreen{
-  background-color: black;
-  opacity: 1;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items:center;
-  justify-content: center;
-
-  &::after {
-    display: none;
   }
 }
 
