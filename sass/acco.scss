@@ -1,16 +1,11 @@
-.team--version--desktop {
-  position: relative;
-}
+
 
 .team {
   display: flex;
-
-  @include tablets {
-    display: none;
-  }
+  justify-content: space-between;
 
   .team__item {
-    
+    flex: 1;
     margin-right: rem(20px);
     max-width: rem(220px);
     position: relative;

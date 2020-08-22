@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./fancybox-master/dist/jquery.fancybox.min.css">
   <title>CHOCCO</title>
 </head>
 <body>
@@ -536,81 +537,6 @@
               </div>
             </li>
           </ul>
-          <!--
-          <ul class="team team--version--mobile">
-            <li class="team__item">
-              <div class="team__content">
-                <button class="team__title" type="button">
-                  Борис Федорович
-                </button>
-                <div class="team__member">
-                  <img src="./image/boris.png" alt="manfirst" class="team__member-img">
-                </div>
-                <div class="team__content-block">
-                  <div class="team__content-subtitle">
-                    Главный технолог
-                  </div>
-                  <div class="team__content-info">
-                    Отвечает за вкусовые качества и калорийность. 
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="team__item">
-              <div class="team__content">
-                <button class="team__title" type="button">
-                  Алла Иванова
-                </button>
-                <div class="team__member">
-                  <img src="./image/alla.png" alt="firstgirl" class="team__member-img">
-                </div>
-                <div class="team__content-block">
-                  <div class="team__content-subtitle">
-                    Специалист по упаковке
-                  </div>
-                  <div class="team__content-info">
-                    Автор запоминающегося стиля наших батончиков.
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="team__item">
-              <div class="team__content">
-                <button class="team__title" type="button">
-                  Кирилл Матросов
-                </button>
-                <div class="team__member">
-                  <img src="./image/kiril.png" class="team__member-img" alt="secondman">
-                </div>
-                <div class="team__content-block">
-                  <div class="team__content-subtitle">
-                    Оператор
-                  </div>
-                  <div class="team__content-info">
-                    С радостью поможет подобрать батончики и оформить заказ. 
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="team__item">
-              <div class="team__content">
-                <button class="team__title" type="button">
-                  Мила Рыжкова
-                </button>
-                <div class="team__member">
-                  <img src="./image/mila.png" alt="secondgirl" class="team__member-img">
-                </div>
-                <div class="team__content-block">
-                  <div class="team__content-subtitle">
-                    PR, маркетинг
-                  </div>
-                  <div class="team__content-info">
-                    По всем вопросам сотрудничества и рекламы писать только Миле. 
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>-->
         </div>
       </section>
       <section class="section reviews__section">
@@ -895,10 +821,22 @@
       </div>
     </div>
   </div>
+  <div class="modal" id="modal">
+    <div class="modal__container">
+      <div class="modal__content">
+        Cообщение отправлено
+      </div>
+      <div class="modal__button-container">
+        <a href="#" class="btn app-close-modal btn--theme--green">ЗАКРЫТЬ</a>
+      </div>
+    </div>
+  </div>
   <script src="./js/jquery-3.5.1.min.js"></script>
-  <script src="./js/tab.js"></script>
+  <script src="./fancybox-master/dist/jquery.fancybox.min.js"></script>
+  <script src="./js/modal.js"></script>
   <script src="./js/fullscreen.js"></script>
   <script src="./js/slider.js"></script>
   <script src="./js/acco.js"></script>
+  <script src="./js/tab.js"></script>
 </body>
 </html>
