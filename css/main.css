@@ -462,6 +462,13 @@ img {
   background: #ffffff;
 }
 
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
 .section {
   height: 100vh;
   min-height: 36.1111111111rem;
@@ -700,10 +707,6 @@ img {
   }
 }
 
-.reviews {
-  background-color: #f8faf9;
-}
-
 .reviews__display {
   background: #f8faf9 url("../image/Слой_2.png") right top no-repeat;
   padding: 2.7777777778rem 2.5rem 1.8888888889rem;
@@ -723,6 +726,29 @@ img {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: -3.6111111111rem;
+}
+
+.reviews__list {
+  position: relative;
+  min-height: 15.5555555556rem;
+}
+
+.reviews__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  -webkit-transition: 03s;
+  transition: 03s;
+  opacity: 0;
+}
+
+.reviews__item.active {
+  position: static;
+  opacity: 1;
+  pointer-events: unset;
 }
 
 .reviews__display-inner {
@@ -811,6 +837,7 @@ img {
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 .interactive-avatar.interactive-avatar:hover {
   border-color: #0f5a47;
@@ -1571,6 +1598,69 @@ img {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.team--version--desktop {
+  position: relative;
+}
+
+.team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .team {
+    display: none;
+  }
+}
+.team .team__item {
+  margin-right: 1.1111111111rem;
+  max-width: 12.2222222222rem;
+  position: relative;
+  text-align: center;
+}
+.team .team__item:last-child {
+  margin-right: 0;
+}
+
+.team__member {
+  height: 16rem;
+  margin-bottom: 1.1111111111rem;
+}
+
+.team__title {
+  color: #323232;
+  font-size: 1.1666666667rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.1111111111rem;
+}
+
+.team__content {
+  position: absolute;
+  top: 100%;
+  -webkit-transition: height .3s;
+  transition: height .3s;
+  overflow: hidden;
+  height: 0;
+}
+
+.team__content-block {
+  padding-bottom: 0.2777777778rem;
+}
+
+.team__content-subtitle {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.3333333333rem;
+}
+
+.team__content-info {
+  color: #666666;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=main.css.map */

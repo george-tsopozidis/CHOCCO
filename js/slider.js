@@ -1,4 +1,4 @@
-const left = document.querySelector("#left");
+  const left = document.querySelector("#left");
 const right = document.querySelector("#right");
 const itemsList = document.querySelector("#items");
 const computedStyles = window.getComputedStyle(itemsList);
