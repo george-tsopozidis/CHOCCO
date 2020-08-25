@@ -1600,6 +1600,25 @@ button {
           box-sizing: border-box;
 }
 
+.team-section {
+  position: relative;
+}
+.team-section:after,
+.team-section ::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: center center / contain  no-repeat;
+  z-index: 1;
+}
+.team-section::after {
+  bottom: -2.875rem;
+  left: 2.125rem;
+  background-image: url("../image/Ягода-2 1.png");
+  width: 6.5rem;
+  height: 7.125rem;
+}
+
 .team {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1608,17 +1627,55 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.team .team__item {
+@media screen and (max-width: 768px) {
+  .team {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 10%;
+    margin-left: -1.25rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team {
+    margin-left: -4.375rem;
+  }
+}
+
+.team__item {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin-right: 1.1111111111rem;
+  text-align: center;
+  cursor: pointer;
   max-width: 12.2222222222rem;
   position: relative;
-  text-align: center;
 }
-.team .team__item:last-child {
+.team__item:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .team__item {
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+    width: calc(100% / 2 - 1.25rem);
+    margin-right: 0;
+    margin-left: 1.25rem;
+    margin-bottom: 2.1875rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__item {
+    width: calc(100% / 2 - 4.375rem);
+    margin-left: 4.375rem;
+  }
+}
+
+.team__item.team__title:after {
+  content: "";
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .team__member {
@@ -1626,12 +1683,38 @@ button {
   margin-bottom: 1.1111111111rem;
 }
 
+.team__member-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .team__title {
   color: #323232;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.1666666667rem;
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 1.1111111111rem;
+}
+.team__title:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 4px;
+  border-left-width: 4px;
+  border-top: 6px solid black;
+  border-bottom: 0;
+  display: block;
+  margin-left: 0.3125rem;
 }
 
 .team__content {
@@ -1657,11 +1740,7 @@ button {
 .team__content-info {
   color: #666666;
   font-size: 1rem;
-  font-weight: 300;
-}
-
-.modal {
-  display: none;
+  opacity: 0.9;
 }
 
 .modal__container {
