@@ -24,13 +24,32 @@
   justify-content: space-between;
 
   @include tablets {
-    flex-wrap: wrap;
     padding: 0 10%;
+    flex-direction: column;
+    align-items: center;
     margin-left: -1.25rem;
   }
+}
 
-  @include phones {
-    margin-left: -4.375rem;
+.team--version--desktop {
+  .team__content {
+    position: absolute;
+    top: 100%;
+  }
+    @include tablets {
+    display: none;
+    }
+}
+
+.team--version--mobile {
+  display: none;
+
+  .team__item {
+    margin-bottom: rem(10px);
+  }
+
+  @include tablets {
+    display: flex;
   }
 }
 
@@ -38,9 +57,13 @@
   flex: 1;
   margin-right: rem(20px);
   text-align: center;
-  cursor: pointer;
   max-width: rem(220px);
   position: relative;
+
+  &.active.team__item::after {
+    content: "";
+    transform: rotate(-180deg);
+  }
 
   &:last-child {
     margin-right: 0;
@@ -48,22 +71,13 @@
 
   @include tablets {
     flex: initial;
-    width: calc(100% / 2 - 1.25rem);
     margin-right: 0;
-    margin-left: 1.25rem;
     margin-bottom: 2.1875rem;
-  }
-
-  @include phones {
-    width: calc(100% / 2 - 4.375rem);
-    margin-left: 4.375rem;
+    margin-left: 1.25rem;
   }
 }
 
-.team__item.team__title:after {
-  content: "";
-  transform: rotate(-180deg);
-}
+
 
 .team__member {
   height: rem(288px);
@@ -83,6 +97,7 @@
   justify-content: center;
   font-size: rem(21px);
   font-weight: 700;
+  margin-bottom: rem(20px);
 
   &:after {
     content: "";
@@ -99,8 +114,6 @@
 }
 
 .team__content {
-  position: absolute;
-  top: 100%;
   transition: height .3s;
   overflow: hidden;
   height: 0;
