@@ -1,5 +1,5 @@
 .modal {
-  //display: none;
+  display: none;
 }
 
 .modal__container {
@@ -14,3 +14,8 @@
   margin-bottom: rem(15px);
   color: #000000;
 }
+
+.input-error {
+   border-color: #ff69b4;
+}
+
