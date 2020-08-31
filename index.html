@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/main.css">
@@ -192,12 +193,17 @@
       </section>
       <section class="section slider-section">
         <div class="container">
-          <a href="#" class="slider__left-link" id="left">
-            <img src="./image/leftarrows.png" alt="leftarrow" class="slider__left-arrow">
-          </a>
           <div class="sliders">
-            <ul class="slider__list items" id="items">
-              <li class="slider__item item">
+            <div class="slider-products">
+              <a href="#" class="slider__left-link" id="left">
+                <img src="./image/leftarrows.png" alt="leftarrow" class="slider__left-arrow">
+              </a>    
+              <a href="#" class="slider__right-link" id="right">
+                <img src="./image/rightarrows.png" alt="rightarrow" class="slider__right-arrow">
+              </a>   
+            </div>
+            <ul class="slider__list">
+              <li class="slider__item">
                 <div class="slider__content">
                   <div class="slider__image">
                     <img src="./image/6-layers.png" alt="choccoone" class="slider__image-icon">
@@ -318,7 +324,7 @@
                   </div>
                 </div>
               </li>
-              <li class="slider__item item">
+              <li class="slider__item">
                 <div class="slider__content">
                   <div class="slider__image">
                     <img src="./image/Товар.png" alt="choccoone" class="slider__image-icon">
@@ -451,7 +457,7 @@
                   </div>
                 </div>
               </li>
-              <li class="slider__item item">
+              <li class="slider__item">
                 <div class="slider__content">
                   <div class="slider__image">
                     <img src="./image/Товар.png" alt="choccoone" class="slider__image-icon">
@@ -584,7 +590,7 @@
                   </div>
                 </div>
               </li>
-              <li class="slider__item item">
+              <li class="slider__item">
                 <div class="slider__content">
                   <div class="slider__image">
                     <img src="./image/Товар.png" alt="choccoone" class="slider__image-icon">
@@ -719,9 +725,6 @@
               </li>
             </ul>
           </div>
-          <a href="#" class="slider__right-link" id="right">
-            <img src="./image/rightarrows.png" alt="rightarrow" class="slider__right-arrow">
-          </a>
         </div>
       </section>
       <section class="section team-section">
@@ -1261,6 +1264,7 @@
   <script src="./js/jquery-3.5.1.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
   </script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="./js/fullscreen.js"></script>
   <script src="./js/slider.js"></script>

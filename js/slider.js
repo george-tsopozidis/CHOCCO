@@ -1,32 +1,14 @@
-const left = document.querySelector("#left");
-const right = document.querySelector("#right");
-const itemsList = document.querySelector("#items");
-const computedStyles = window.getComputedStyle(itemsList);
-const items = document.querySelectorAll(".item");
+const slider = $('.slider__list').bxSlider({
+  pager: false,
+  controls: false
+});
 
-const minRight = 0;
-const itemWidth = getComputedStyle(items[0]).width;
-const step = parseInt(itemWidth);
-const preShownItems = 300 / step;
-const maxRight = (items.length - preShownItems) * step;
-let currentRight = 0;
-
-itemsList.style.right = currentRight;
-
-right.addEventListener("click", (e) => {
+$('.slider__left-arrow').click((e) => {
   e.preventDefault();
+  slider.goToPrevSlide();
+});
 
-  if (currentRight < maxRight) {
-    currentRight += step;
-    itemsList.style.right = `${currentRight}px`;
-  }
-})
-
-left.addEventListener("click", (e) => {
+$('.slider__right-arrow').click((e) => {
   e.preventDefault();
-
-  if (currentRight > minRight) {
-    currentRight -= step;
-    itemsList.style.right = `${currentRight}px`;
-  }
-})
+  slider.goToNextSlide();
+});
