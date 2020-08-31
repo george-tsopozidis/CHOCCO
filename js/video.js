@@ -19,13 +19,13 @@ dynamic.addEventListener('click', mute);
 volume.addEventListener('click', setVolume);
 
 
-function setVolume() {
+function setVolume(e) {
   volumeProgress.style.width = `${e.offsetX}px`;
-  console.log(e.offsetX / volume.clientWidth)
+  console.log(e.offsetX / volume.clientWidth);
   video.volume = e.offsetX / volume.clientWidth;
 }
 
-function mute(_e) {
+function mute() {
   dynamic.classList.toggle('muted');
   console.log(video.muted);
   video.muted = !video.muted;
@@ -40,8 +40,8 @@ function togglePlay() {
   video.paused ?  video.play() : video.pause();
 }
 
-function setCurrentTime(_e) {
-  const offsetX = e.offsetX / total.clientWidth;
+function setCurrentTime(e) {
+  const offsetX = e.offsetX / video.clientWidth;
   console.log(offsetX * video.duration)
   video.currentTime = offsetX * video.duration;
 }

@@ -32,12 +32,12 @@ const closeEveryItemInContainer = container => {
   content.width(0);
 };
 
-const openItem = item => {
-  const hiddenContent = item.find(".products-menu__content");
-  const reqWidth = mesureWidth(item);
-  const textBlock = item.find(".products-menu__container");
+const openItems = items => {
+  const hiddenContent = items.find(".products-menu__content");
+  const reqWidth = mesureWidth(items);
+  const textBlock = items.find(".products-menu__container");
 
-  item.addClass("active");
+  items.addClass("active");
   hiddenContent.width(reqWidth.container);
   textBlock.width(reqWidth.textContainer);
 };
@@ -46,15 +46,15 @@ $(".products-menu__title").on("click", (e) => {
   e.preventDefault();
 
   const $this = $(e.currentTarget);
-  const item = $this.closest(".products-menu__item");
-  const itemOpened = item.hasClass("active");
+  const items = $this.closest(".products-menu__item");
+  const itemOpened = items.hasClass("active");
   const container = $this.closest(".products-menu");
 
   if (itemOpened) {
     closeEveryItemInContainer(container)
   } else {
     closeEveryItemInContainer(container)
-    openItem(item);
+    openItems(items);
   };
 });
 
