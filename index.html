@@ -730,7 +730,7 @@
             Команда
           </div>
           <ul class="team team--version--desktop">
-            <li class="team__item active">
+            <li class="team__item">
               <div class="team__member">
                 <img src="./image/boris.png" alt="manfirst" class="team__member-img">
               </div>
@@ -879,6 +879,62 @@
           </ul>
         </div>
       </section>
+      <section class="section products-menu-section">
+        <h1 class="section__title products-menu-section__title">Меню</h1>
+          <ul class="products-menu">
+            <li class="products-menu__item">
+              <a href="#" class="products-menu__title">
+                <img class="products-menu__image" src="./image/tropic.png" alt="fruit">
+                <div class="products-menu__text">Батончики с молоком</div>
+              </a>
+              <div class="products-menu__content">
+                <div class="products-menu__container">
+                  <button class="products-menu__close" type="button">
+                    <img src="./image/Закрыть.png" alt="close">
+                  </button>
+                  <div class="products-menu__content-text">
+                    Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее.
+                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products-menu__item">
+              <a href="#" class="products-menu__title">
+                <img class="products-menu__image" src="./image/Granola-Bars-with-calamondin.jpg.png" alt="fruit">
+                <div class="products-menu__text">Батончики с молоком</div>
+              </a>
+              <div class="products-menu__content">
+                <div class="products-menu__container">
+                  <button class="products-menu__close" type="button">
+                    <img src="./image/Закрыть.png" alt="close">
+                  </button>
+                  <div class="products-menu__content-text">
+                    Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее.
+                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products-menu__item">
+                <a href="#" class="products-menu__title">
+                  <img class="products-menu__image" src="./image/shutterstock_684121381.jpg.png" alt="fruit">
+                  <div class="products-menu__text">Батончики с молоком</div>
+                </a>
+                <div class="products-menu__content">
+                  <div class="products-menu__container">
+                    <button class="products-menu__close" type="close">
+                      <img src="./image/Закрыть.png" alt="btn">
+                    </button>
+                    <div class="products-menu__content-text">
+                      Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее.
+                      Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
+                    </div>
+                  </div>
+                </div>
+            </li>
+          </ul>
+      </section>
       <section class="section reviews__section">
         <div class="container">
           <h2 class="section__title">Отзывы</h2>
@@ -965,6 +1021,36 @@
               </a>
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="section section__video">
+        <div class="container">
+          <h2 class="section__title">как мы работаем</h2>
+          <div class="video">
+            <video  src="./image/chocc.mp4" width="660" height="370" class="video__mp4" id="video" poster="./image/videoimage.png">
+            </video>
+            <div class="video__controls">
+              <div class="video__playpause" id="pause">
+                <img src="./image/Play_gray.png" alt="buttongray" class="video__playpause-img">
+              </div>
+              <div class="video__play" id="play">
+                <img src="./image/Play_white.png" alt="btnwhite" class="video__play-img">
+              </div>
+              <div class="video__progress">
+                <span class="video__total">
+                  <span class="video__current"></span>
+                </span>
+              </div>
+              <div class="video__volume">
+                <div class="video__volume-control">
+                  <img src="./image/Volum_gray.png" alt="volume" class="video__volume-img">
+                </div>
+                <div class="video__volume-progress">
+                  <span class="video__volume-current"></span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section order-section section--font--color--green">
@@ -1173,14 +1259,16 @@
     </div>
   </div>
   <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+  </script>
   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="./js/fullscreen.js"></script>
   <script src="./js/slider.js"></script>
   <script src="./js/acco.js"></script>
+  <script src="./js/horizontal.js"></script>
   <script src="./js/tab.js"></script>
+  <script src="./js/video.js"></script>
   <script src="./js/modal.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
-    </script>
   <script src="./js/map.js"></script>
 </body>
 </html>

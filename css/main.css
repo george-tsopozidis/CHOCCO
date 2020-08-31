@@ -173,6 +173,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  max-height: 100%;
 }
 
 .hero {
@@ -1778,6 +1779,221 @@ button {
 
 .input-error {
   border-color: #ff69b4;
+}
+
+.section__video {
+  background-color: #f8faf9;
+}
+
+.video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.video__mp4 {
+  width: 34.6666666667rem;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.video__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 1.9444444444rem;
+  padding: 0 1.3333333333rem;
+  background-color: #404040;
+  width: 34.6666666667rem;
+}
+
+.video__playpause,
+.video__volume-control {
+  height: 1.9444444444rem;
+  width: 2rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.paused .video__play-img {
+  visibility: hidden;
+}
+.paused .video__playpause-img {
+  opacity: 0.3;
+}
+
+.video__play {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.video__progress,
+.video__volume-progress {
+  height: 0.2222222222rem;
+  background-color: #626262;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  cursor: pointer;
+  width: 4.4444444444rem;
+  margin-right: 2.4444444444rem;
+}
+.video__progress:last-child,
+.video__volume-progress:last-child {
+  margin-right: 0;
+}
+
+.video__total {
+  width: 100%;
+  height: 100%;
+  background: #626262;
+}
+
+.video__volume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video__current,
+.video__volume-current {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.video__current::before,
+.video__volume-current::before {
+  content: "";
+  height: 0.7222222222rem;
+  width: 0.7222222222rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #626262;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  -webkit-transform: translate(0, -35%);
+          transform: translate(0, -35%);
+}
+
+.products-menu-section {
+  width: 100%;
+  height: 100vh;
+  background: url("../image/картинка.png") center center/cover no-repeat;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products-menu-section__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 12%;
+  left: 6%;
+  color: #fff;
+}
+
+.products-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products-menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.products-menu__title {
+  position: relative;
+  width: 5.5555555556rem;
+}
+
+.products-menu__image {
+  width: 100px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products-menu__text {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+  color: #ffffff;
+  font-size: 3rem;
+  width: 38rem;
+  left: -292%;
+}
+
+.products-menu__content {
+  background: rgba(47, 50, 52, 0.9);
+  width: 0;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: width .7s;
+  transition: width .7s;
+}
+
+.products-menu__container {
+  padding: 48px 73px 45px 26px;
+}
+
+.products-menu__close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  border: none;
+  background: transparent;
+}
+
+.products-menu__content-text {
+  color: #ffffff;
+  line-height: 1.3316666667rem;
 }
 
 /*# sourceMappingURL=main.css.map */

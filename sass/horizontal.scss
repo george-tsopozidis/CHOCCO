@@ -1,0 +1,78 @@
+.products-menu-section {
+  width: 100%;
+  height: 100vh;
+  background: url("../image/картинка.png") center center / cover no-repeat;
+  position: relative;
+  display: flex;
+}
+
+.products-menu-section__title {
+  display: flex;
+  position: absolute;
+  top: 12%;
+  left: 6%;
+  color: #fff;
+}
+
+.products-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.products-menu__item {
+  display: flex;
+  list-style: none;
+}
+
+
+.products-menu__title {
+  position: relative;
+  width: rem(100px);
+}
+
+.products-menu__image {
+  width: 100px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.products-menu__text {
+  position: absolute;
+  top: 50%;
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+  color: #ffffff;
+  font-size: 3rem;
+  width: 38rem;
+  left: -292%;
+}
+
+.products-menu__content {
+  background: rgba(47 , 50, 52, 0.9);
+  width: 0;
+  position: relative;
+  overflow: hidden;
+  transition: width .7s;
+}
+
+.products-menu__container {
+  padding: 48px 73px 45px 26px;
+}
+
+.products-menu__close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  border: none;
+  background: transparent;
+}
+
+.products-menu__content-text {
+  color: #ffffff;
+  line-height: rem(23.97px);
+}
