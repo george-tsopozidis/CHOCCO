@@ -30,7 +30,7 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -39,6 +39,12 @@ body {
   max-width: $containerWidth;
   margin: 0 auto;
   position: relative;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+  will-change: transform;
 }
 // tag styles reset 
 h1,

@@ -1,8 +1,14 @@
+.fixed-menu--shadowed {
+  color: #000000;
+}
+
 .fixed-menu {
   position: fixed;
   top: 20%;
   right: 3%;
-  z-index: $z-fixed-menu;
+  z-index: 100;
+  color: #ffffff;
+
 
   @include tablets {
     display: none;
